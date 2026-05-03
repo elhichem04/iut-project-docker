@@ -3,7 +3,7 @@ package org.example.iutprojectdocker;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
-import orh.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
@@ -12,7 +12,7 @@ public class HelloController {
     @Value("${APP_USER:World}")
     private String user;
 
-    public HelloController(StringRedisTemplate redis Template) {
+    public HelloController(StringRedisTemplate redisTemplate) {
         this.redisTemplate = redisTemplate;
     }
 
