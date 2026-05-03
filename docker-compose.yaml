@@ -3,3 +3,14 @@ services:
     build: .
     ports:
       - "8080:8080"
+    depends_on:
+      - redis
+    environment:
+      - APP_USER=Hicham
+      - SPRING_DATA_REDIS_HOST=redis
+      - SPRING_DATA_REDIS_PORT=6379
+
+  redis:
+    image: redis:8
+    ports:
+      - "6379:6379"
